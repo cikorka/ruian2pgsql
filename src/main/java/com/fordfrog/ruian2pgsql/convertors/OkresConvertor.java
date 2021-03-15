@@ -30,6 +30,7 @@ import com.fordfrog.ruian2pgsql.utils.XMLUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Types;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -107,7 +108,12 @@ public class OkresConvertor extends AbstractSaveConvertor<Okres> {
         pstm.setString(index++, item.getNazev());
         pstmEx.setBoolean(index++, item.getNespravny());
         pstm.setInt(index++, item.getVuscKod());
-        pstmEx.setInt(index++, item.getKraj1960Kod());
+        final Integer kraj1960Kod = item.getKraj1960Kod();
+        if (kraj1960Kod == null) {
+            pstm.setNull(index++, Types.INTEGER);
+        } else {
+            pstm.setInt(index++, kraj1960Kod);
+        }
         pstm.setLong(index++, item.getIdTransRuian());
         pstm.setString(index++, item.getNutsLau());
         pstmEx.setDate(index++, item.getPlatiOd());
