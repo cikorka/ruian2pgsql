@@ -41,6 +41,8 @@ public class Orp implements ItemWithDefinicniBod, ItemWithHranice {
     private Boolean zmenaGrafiky;
     private String definicniBod;
     private String hranice;
+    private Date datumVzniku;
+    private Integer okresKod;
 
     public Integer getKod() {
         return kod;
@@ -135,4 +137,16 @@ public class Orp implements ItemWithDefinicniBod, ItemWithHranice {
     public void setHranice(final String hranice) {
         this.hranice = hranice;
     }
+
+    public Date getDatumVzniku() {
+        return datumVzniku;
+    }
+
+    public void setDatumVzniku(final Date datumVzniku) {
+        this.datumVzniku = datumVzniku;
+    }
+
+    public Integer getOkresKod() {return okresKod;}
+
+    public void setOkresKod(final Integer okresKod) {this.okresKod = okresKod;}
 }
