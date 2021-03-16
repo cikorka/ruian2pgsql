@@ -30,6 +30,7 @@ import com.fordfrog.ruian2pgsql.utils.XMLUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Types;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -118,7 +119,13 @@ public class OrpConvertor extends AbstractSaveConvertor<Orp> {
         }
 
         pstmEx.setDate(index++, item.getDatumVzniku());
-        pstm.setInt(index++, item.getOkresKod());
+        final Integer okresKod = item.getOkresKod();
+        if (okresKod == null) {
+            pstm.setNull(index++, Types.INTEGER);
+        } else {
+            pstm.setInt(index++, okresKod);
+        }
+
         pstm.setInt(index++, item.getKod());
 
         if (update) {
