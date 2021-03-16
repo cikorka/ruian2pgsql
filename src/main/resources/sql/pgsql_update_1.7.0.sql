@@ -59,7 +59,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_region_soudrznosti ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_region_soudrznosti datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_region_soudrznosti exists in rn_region_soudrznosti';
         END;
     END;
 $$;
@@ -69,7 +69,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_vusc ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_vusc datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_vusc';
         END;
     END;
 $$;
@@ -79,7 +79,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_kraj_1960 ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_kraj_1960 datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_kraj_1960';
         END;
     END;
 $$;
@@ -89,7 +89,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_okres ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_okres datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_okres';
         END;
     END;
 $$;
@@ -99,7 +99,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_orp ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_orp datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_orp';
         END;
     END;
 $$;
@@ -109,7 +109,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_pou ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_pou datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_pou';
         END;
     END;
 $$;
@@ -119,7 +119,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_obec ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_obec datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_obec';
         END;
     END;
 $$;
@@ -129,7 +129,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_cast_obce ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_cast_obce datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_cast_obce';
         END;
     END;
 $$;
@@ -139,7 +139,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_mop ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_mop datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_mop';
         END;
     END;
 $$;
@@ -149,7 +149,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_momc ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_momc datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_momc';
         END;
     END;
 $$;
@@ -159,7 +159,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_katastralni_uzemi ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_katastralni_uzemi datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_katastralni_uzemi';
         END;
     END;
 $$;
@@ -169,7 +169,7 @@ DO $$
         BEGIN
             ALTER TABLE rn_zsj ADD COLUMN datum_vzniku date;
         EXCEPTION
-            WHEN duplicate_column THEN RAISE NOTICE 'Column rn_zsj datum_vzniku exists in hlavicka';
+            WHEN duplicate_column THEN RAISE NOTICE 'Column datum_vzniku exists in rn_zsj';
         END;
     END;
 $$;
