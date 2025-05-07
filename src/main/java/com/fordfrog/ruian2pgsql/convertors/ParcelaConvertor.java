@@ -209,8 +209,12 @@ public class ParcelaConvertor extends AbstractSaveConvertor<Parcela> {
                                 Integer.parseInt(reader.getElementText()));
                         break;
                     case "Geometrie":
-                        Utils.processGeometrie(
-                                reader, getConnection(), item, NAMESPACE);
+                        try {
+                            Utils.processGeometrie(
+                                    reader, getConnection(), item, NAMESPACE);
+                        } catch (final Exception ex) {
+                            // todo this is workaround for bad geometries
+                        }
                         break;
                     case "Id":
                         item.setId(Long.parseLong(reader.getElementText()));
