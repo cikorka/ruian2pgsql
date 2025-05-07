@@ -58,9 +58,13 @@ public class Curve extends AbstractGeometry implements GeometryWithPoints, Curve
     @Override
     public Line linearize(final double precision) {
         if (points.size() < 3) {
-            throw new RuntimeException(MessageFormat.format(
-                "Invalid Curve definition: need at least 3 control points, but got {0}.",
-                points.size()));
+            if (points.size() == 2) {
+                points.add(points.get(1)); // todo ugly
+            } else {
+                throw new RuntimeException(MessageFormat.format(
+                        "Invalid Curve definition: need at least 3 control points, but got {0}.",
+                        points.size()));
+            }
         }
 
         final Line line = new Line();
